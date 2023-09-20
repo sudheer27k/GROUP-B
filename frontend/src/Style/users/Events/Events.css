@@ -1,0 +1,148 @@
+.contain{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    margin-left: 23%;
+    margin-top: 3%;
+    height: 90%;
+
+}
+
+.day{
+    color: white !important;
+   
+}
+.date{
+    width: 10rem;
+}
+.card{
+    /* display: absolute; */
+    width: 45rem;
+    height: 8rem;
+    box-shadow: 5px 5px rgba(112, 120, 230, 0.267);
+  
+}
+.custom{
+    display: flex;
+
+}
+
+.box1{
+    display: inherit;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    border-right: solid #ff8fb5 5px;
+    background-color: #8275e9;
+    padding-right: 5px;
+    
+
+}
+
+
+
+.box2{
+    width: 60%;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box3{
+    width: 20%;
+    display: inherit;
+    align-items: center;
+}
+
+.days{
+    display: flex;
+    flex-direction: column;
+}
+.days p{
+    margin: 0;
+}
+.scrollable{
+    max-height: 520px;
+    overflow: auto;
+    margin-right: 26%;
+    padding-bottom: 5px;
+    
+}
+
+.add{
+    width: 20%;
+}
+
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    
+    
+}
+
+/* webkit-based browsers (Chrome, Safari) */
+.date{
+    box-shadow: 3px 3px rgba(112, 120, 230, 0.267);
+    border-radius: 5px;
+    border: none;
+}
+.search {
+    width: 30%;
+    box-shadow: 3px 3px rgba(112, 120, 230, 0.267);
+    border-radius: 5px;
+    border: none;
+}
+
+.today{
+    background-color:  #FF6196;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    /* font-weight: bold; */
+}
+.clear{
+    background-color: #FF6196;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.icon-container-1 {
+    position: relative;
+    display: inline-block; 
+  }
+  .icon-container-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    transform: rotate(45deg);
+    opacity: 0.7; 
+    z-index: 1; 
+  }
+  .icon-container-1 img {
+    z-index: 2; 
+  }
+  
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #ffb4cd; /* Background color of the thumb */
+  border-radius: 10px; /* Rounded corners of the thumb */
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px; /* Rounded corners of the track */
+}

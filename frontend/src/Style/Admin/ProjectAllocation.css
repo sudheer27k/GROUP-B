@@ -1,0 +1,130 @@
+/* Style for the Update and Delete buttons */
+button.btn-update {
+  background-color:#19105B;
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 20%;
+  }
+
+  
+  button.btn-delete {
+    background-color: #FF6196;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+
+  button.btn-add {
+    background-color: #FF6196;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+
+  button.accordion-button-custom {
+    background-color: #19105B !important;
+    color: #fff !important;
+  }
+  
+  button.accordion-button-custom.collapsed {
+    background-color: #19105B !important;
+    color: #fff !important;
+  }
+
+.Searchelement {
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+.user-list-scroll {
+  max-height: 200px; 
+  overflow-y: scroll; 
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); 
+}
+
+.user-list-scroll::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.user-list-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+
+
+.user-list-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.project-allocation-container {
+  position: relative;
+}
+
+.accordion-button-custom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+
+.project-table-container {
+  max-height: calc(100vh - 200px); 
+}
+
+.btn-add {
+  position: sticky;
+  bottom: 16px; 
+  z-index: 2;
+  background-color: white;
+}
+
+ 
+.tableadmin {
+  width: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse;
+  margin-top: 1%;
+}
+
+.tableadmin th {
+  padding: 0.8rem;
+  text-align: center; /* You can adjust text alignment as needed */
+  vertical-align: middle;
+  font-size: 1rem;
+  background: #19105b !important;
+  font-weight: bold;
+  position: sticky;
+  color: aliceblue;
+}
+
+.tableadmin th,
+.tableadmin td {
+  width: 10%; 
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 1rem;
+  /* font-weight: bold; */
+}
+
+.tableadmin td {
+  padding: 0.6rem;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Optional: break long words */
+  /* text-align: left; */
+}
+
+/* .tableadmin td:nth-child(1) {
+  text-align: left;
+} */

@@ -1,0 +1,154 @@
+button.btn-update1 {
+    background-color:#19105B;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+  button.btn-delete {
+    background-color: #FF6196;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+  
+  /* Style for the Add Event button */
+button.btn-add {
+    background-color: #FF6196;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+  
+  /* Style for the accordion button (if needed) */
+button.accordion-button-custom {
+    background-color: #19105B !important;
+    color: #fff !important;
+ }
+  
+button.accordion-button-custom.collapsed {
+    background-color: #19105B !important;
+    color: #fff !important;
+}
+
+/* Style the container for the accordion and the button */
+.users-container {
+    max-height: 80vh; /* Set a maximum height for the container */
+    overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+    padding-bottom: 60px; /* Reserve space at the bottom for the fixed button */
+}
+  
+  /* Style the accordion items (adjust styles as needed) */
+ .users-accordion-item {
+    /* Add your styles for accordion items here */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin: 5px;
+}
+  
+  /* Style the fixed button */
+.fixed-button {
+    position: fixed;
+    bottom: 70px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    background-color: #19105B; /* Change the button's background color */
+    color: #fff; /* Change the button's text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.fixed-button:hover {
+  background-color: #19105B; /* Change the button's background color on hover */
+}
+
+.tables {
+  width: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse;
+}
+
+.tables th {
+  padding: 0.8rem;
+  text-align: center; /* You can adjust text alignment as needed */
+  vertical-align: middle;
+  font-size: 1rem;
+  background: #19105b !important;
+  font-weight: bold;
+  position: sticky;
+  color: aliceblue;
+}
+
+.tables th,
+.tables td {
+  width: 10%; 
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 1rem;
+  /* font-weight: bold; */
+}
+
+.tables td {
+  padding: 0.6rem;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Optional: break long words */
+}
+
+.tables th:nth-child(1),
+.tables td:nth-child(1) {
+  width: 7%; 
+}
+
+.tables th:nth-child(2),
+.tables td:nth-child(2) {
+  width: 7%; /* First column width */
+}
+
+.tables th:nth-child(3),
+.tables td:nth-child(3) {
+  width: 17%; /* First column width */
+}
+
+.tables th:nth-child(4),
+.tables td:nth-child(4) {
+  width: 9%; /* First column width */
+}
+
+.tables th:nth-child(5),
+.tables td:nth-child(5) {
+  width: 7%; /* First column width */
+}
+
+.tables th:nth-child(6),
+.tables td:nth-child(6) {
+  width: 8%; /* First column width */
+}
+
+.tables th:nth-child(7),
+.tables td:nth-child(7) {
+  width: 9%; /* First column width */
+}
+
+.tables th:nth-child(8),
+.tables td:nth-child(8) {
+  width: 7%; /* First column width */
+}
+
+.tables th:nth-child(9),
+.tables td:nth-child(9) {
+  width: 7%; /* First column width */
+}
+
+.tables th:nth-child(10),
+.tables td:nth-child(10) {
+  width: 10%; /* First column width */
+}

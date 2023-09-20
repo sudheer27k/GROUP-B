@@ -1,0 +1,57 @@
+/* 
+.App {
+
+  margin-left: 15%;
+ 
+} */
+
+.calendar {
+  height: 700px;
+  margin: 50px;
+  border-radius: 2rem;
+}
+
+
+.rbc-event.rbc-selected{
+  background-color: #FF6196 !important;
+}
+.rbc-event-content {
+  background-color: #FF6196 !important;
+  border-radius: 5px;
+  text-align: center;
+  color: #19105b;
+  font-weight: bold;
+}
+
+
+
+.rbc-header {
+  background-color: #19105b;
+  color: white;
+  padding: 4px;
+  padding: 0.7rem;
+  font-weight: bold;
+}
+.rbc-event {
+  background-color: #FF6196;
+  border-radius: 10px;
+  font-size: 16px;
+  /* padding: 0.3rem; */
+}
+
+.rbc-event-label {
+  display: none !important;
+}
+
+/* Modal.css */
+
+.background-blur {
+  backdrop-filter: blur(5px); /* Add a blur effect to the entire container */
+  pointer-events: none; /* Allow events to pass through the blurred layer */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the blurred background below other content */
+}

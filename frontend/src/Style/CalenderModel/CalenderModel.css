@@ -1,0 +1,51 @@
+/* Modal.css */
+
+.modal {
+    background-color: #bbbbbb; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    max-width: 400px;
+    margin: 0 auto; 
+    padding: 20px; 
+    position: relative;
+    top: 45%; 
+    left: 25%; 
+    transform: translate(-50%, -50%);
+    /* background: #000000; */
+  
+  }
+
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .button {
+    background-color: #FF6196; 
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 15px;
+
+  }
+  
+  .modal button:hover {
+    background-color: #19105b; 
+  }
+  
+.type {
+    color:  #FF6196;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+}
+ 
+.title {
+    color: #19105b;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+}

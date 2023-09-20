@@ -1,0 +1,66 @@
+
+button.btn-add {
+    background-color: #FF6196;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+.btn-update2 {
+  background-color:#19105B;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+  /* Style for the accordion button (if needed) */
+  button.accordion-button-custom {
+    background-color: #19105B !important;
+    color: #fff !important;
+  }
+  
+  button.accordion-button-custom.collapsed {
+    background-color: #19105B !important;
+    color: #fff !important;
+  }
+
+  .table1 {
+    width: 100%;
+    table-layout: fixed; 
+    border-collapse: collapse;
+  }
+  
+  .table1 th {
+    padding: 0.8rem;
+    text-align: center; /* You can adjust text alignment as needed */
+    vertical-align: middle;
+    font-size: 1rem;
+    background: #19105b !important;
+    font-weight: bold;
+    position: sticky;
+    color: aliceblue;
+  }
+  
+  .table1 th,
+  .table1 td {
+    width: 10%; 
+    text-align: center; 
+    vertical-align: middle;
+    font-size: 1rem;
+    /* font-weight: bold; */
+  }
+  
+  .table1 td {
+    padding: 0.6rem;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Optional: break long words */
+  }
+
+  /* .table1 tbody tr {
+    border-bottom: 1px solid #ccc;
+  } */

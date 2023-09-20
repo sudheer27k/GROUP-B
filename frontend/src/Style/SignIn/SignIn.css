@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.signin_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4rem;
+    padding: 0.5rem;
+}
+
+.signin_h2 {
+    color: #0174DF;
+    color: #19105B;
+    color: white;
+    margin-right: 95%;
+}
+.signInContainer {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.signInForm {
+    width: 30vw;
+    border-radius: 10px;
+    height: 59vh;
+    margin-top: 6rem;
+    margin-left: 60%;
+    background: linear-gradient(to bottom, #19105B, white);  
+
+}
+
+.signin_btn {
+    color: white;
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-left: 67.4%;
+    background: #19105B;
+    cursor: pointer;
+
+}
+.signin_footer{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.signin_p_tag{
+    margin-left: 44%;
+    color: #19105B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signInForm .email,
+.signInForm .password {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.lable {
+    font-size: 23px;
+    font-weight: bolder;
+    color: #19105B;
+    color: white;
+    font-family: "Arial";
+}
+
+.input {
+    width: 90.5%;
+    padding: 0.8vmax;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 0.5vmax 0;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .signin_head {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* margin-right: 4rem; */
+        padding: 1rem;
+    }
+    
+    .signin_h2 {
+        color: white;
+        margin: 2%;
+        margin-right: 80%;
+    }
+    .signInContainer {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../Images/bgmedia.jpg");
+        background-size: 100% 13%;
+        border-radius: 0.6rem;
+    }
+    .signInForm {
+        width: 60vw;
+        border-radius: 10px;
+        height: 59vh;
+        /* margin-top: 6rem; */
+        margin-left: 20%;
+        background: linear-gradient(to bottom, #19105B, white);  
+    
+    }
+    
+    .signin_btn {
+        color: white;
+        width: 7rem;
+        height: 3rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        margin-left: 55%;
+        background: #19105B;
+        cursor: pointer;
+    
+    }
+    .signin_footer{
+        display: flex;
+        margin-top: 4%;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .signin_p_tag{
+        margin-left: 22%;
+        color: #19105B;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+}
+
+/* S8 */
+@media only screen and (min-width: 360px) and (max-width: 375px) {
+    
+    .signin_head {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .signin_h2 {
+        color: white;
+        margin: 2%;
+        margin-right: 80%;
+    }
+    .signInContainer {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../Images/bgmedia.jpg");
+        background-size: 100% 12%;
+        border-radius: 0.6rem;
+    }
+    .signInForm {
+        width: 80vw;
+        border-radius: 0.6rem;
+        height: 59vh;
+        margin-left: 10%;
+        background: linear-gradient(to bottom, #19105B, white);  
+    
+    }
+    
+    .signin_btn {
+        color: white;
+        width: 7rem;
+        height: 3rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        margin-left: 45%;
+        background: #19105B;
+        cursor: pointer;
+    
+    }
+
+    .signin_p_tag{
+        margin-left: 5%;
+        color: #19105B;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+}
+/* iphone SE and iphone 12 PRO */
+@media only screen and (min-width: 375px) and (max-width: 393px) {
+    
+    .signin_head {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .signin_h2 {
+        color: white;
+        margin: 2%;
+        margin-right: 80%;
+    }
+    .signInContainer {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../Images/bgmedia.jpg");
+        background-size: 100% 12%;
+        border-radius: 0.6rem;
+    }
+    .signInForm {
+        width: 80vw;
+        border-radius: 0.6rem;
+        height: 59vh;
+        margin-left: 10%;
+        background: linear-gradient(to bottom, #19105B, white);  
+    
+    }
+    
+    .signin_btn {
+        color: white;
+        width: 7rem;
+        height: 3rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        margin-left: 48%;
+        background: #19105B;
+        cursor: pointer;
+    
+    }
+
+    .signin_p_tag{
+        margin-left: 12%;
+        color: #19105B;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+}
+/* ipad Air */
+@media only screen and (min-width: 393px) and (max-width: 820px) {
+    
+    .signin_head {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .signin_h2 {
+        color: white;
+        font-size: 2.5rem;
+        margin: 2%;
+        margin-right: 85%;
+    }
+    .signInContainer {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../../Images/bgmedia.jpg");
+        background-size: 100% 12%;
+        border-radius: 0.6rem;
+    }
+    .signInForm {
+        width: 80vw;
+        height: 59vh;
+        margin-left: 10%;
+        border-radius: 0.6rem;
+        background: linear-gradient(to bottom, #19105B, white);  
+    
+    }
+    
+    .signin_btn {
+        color: white;
+        width: 7rem;
+        height: 3rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.6rem;
+        margin-left: 73%;
+        background: #19105B;
+        cursor: pointer;
+    
+    }
+
+    .signin_p_tag{
+        margin-left: 52%;
+        color: #19105B;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+}
+

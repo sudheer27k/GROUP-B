@@ -1,0 +1,44 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar/Navigation */
+  .sidebar {
+    width: 12%;
+    background-image: linear-gradient(#19105b, #472067, #7c3375, #FF6196) !important;
+    color: #fff;
+    padding: 20px;
+    
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    overflow-y: scroll;
+  }
+  
+  .sidebar nav li:last-child {
+    position: absolute;
+    bottom: 20px; /* Adjust the bottom position as needed */
+  }
+  
+  
+  
+  
