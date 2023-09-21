@@ -1,10 +1,3 @@
-/* 
-.App {
-
-  margin-left: 15%;
- 
-} */
-
 .calendar {
   height: 700px;
   margin: 50px;
@@ -12,9 +5,10 @@
 }
 
 
-.rbc-event.rbc-selected{
+.rbc-event.rbc-selected {
   background-color: #FF6196 !important;
 }
+
 .rbc-event-content {
   background-color: #FF6196 !important;
   border-radius: 5px;
@@ -23,6 +17,9 @@
   font-weight: bold;
 }
 
+.rbc-today {
+  background-color: #FF6196;
+}
 
 
 .rbc-header {
@@ -32,6 +29,7 @@
   padding: 0.7rem;
   font-weight: bold;
 }
+
 .rbc-event {
   background-color: #FF6196;
   border-radius: 10px;
@@ -46,12 +44,15 @@
 /* Modal.css */
 
 .background-blur {
-  backdrop-filter: blur(5px); /* Add a blur effect to the entire container */
-  pointer-events: none; /* Allow events to pass through the blurred layer */
+  backdrop-filter: blur(5px);
+  /* Add a blur effect to the entire container */
+  pointer-events: none;
+  /* Allow events to pass through the blurred layer */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Place the blurred background below other content */
+  z-index: -1;
+  /* Place the blurred background below other content */
 }

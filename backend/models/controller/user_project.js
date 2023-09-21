@@ -35,24 +35,6 @@ const addProject_addUser = async (req, res) => {
 
 }
 
-
-// const projectDetailsOfLoginUser = async(req, res) => {
-//   let userId = req.params.id;
-//   console.log(userId, "this is userID")
-//   try {
-//     const allProjectIds = await user_project.findAll({
-//       where :  {
-//         user_id : userId
-//       }
-//     })
-    
-//     console.log(allProjectIds)
-//     res.send(allProjectIds)
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
 const projectDetailsOfLoginUser = async (req, res) => {
   let userId = req.params.id;
   console.log(userId, "this is userID");

@@ -1,8 +1,6 @@
 const db = require('../entity')
 const holidays = db.holidays
 
-
-
 const getAllHolidays = async(req,res) =>{
     try {
         // Create a new admin record in the database

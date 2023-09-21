@@ -28,9 +28,6 @@ const UserProfile_ProjectAllocation = () => {
         if(id){
             const response = await getLoginUser.UserProjectAllocationDetails(id)
             setProjectsData(response.data)
-            // setProjectsData(response)
-            // console.log(projectsData, "this is projectsData")
-
         }
     }
     useEffect(() => {
@@ -39,61 +36,20 @@ const UserProfile_ProjectAllocation = () => {
     }, [])
 
 
+    useEffect(() => {
+        // Function to extract the initial letters from first and last names
+        const extractInitialLetters = () => {
+            const nameElement = document.getElementById('name');
+            if (nameElement && nameElement.textContent) {
+                const nameParts = nameElement.textContent.split(' ');
+                const initials = nameParts.map((part) => part.charAt(0).toUpperCase());
+                const initialString = initials.join('');
+                setInitialLetter(initialString);
+            }
+        };
 
-    // Simulated user data (replace this with actual fetched data)
-    // const simulatedUserData = {
-    //     name: 'Name lastname',
-    //     jobTitle: 'Software Developer',
-    //     bloodGroup: 'O+',
-    //     id: 'JMD222',
-    //     dob: '29.03.2002',
-    //     contact: '8925368223',
-    // };
-
-    // useEffect(() => {
-    //     setUserData(simulatedUserData);
-    // }, []);
-
-
-
-
-    // useEffect(() => {
-    //   // Fetch data from the server using the service function
-    //   fetchDataFromServer()
-    //     .then((data) => setData(data))
-    //     .catch((error) => console.error('Error fetching data:', error));
-    // }, []);
-
-    // useEffect(() => {
-    //     // Function to extract the initial letters from first and last names
-    //     const extractInitialLetters = () => {
-    //         const nameElement = document.getElementById('name');
-    //         if (nameElement && nameElement.textContent) {
-    //             const nameParts = nameElement.textContent.split(' ');
-    //             const initials = nameParts.map((part) => part.charAt(0).toUpperCase());
-    //             const initialString = initials.join('');
-    //             setInitialLetter(initialString);
-    //         }
-    //     };
-
-    //     extractInitialLetters();
-    // }, [userData]);
-
-
-    // useEffect(() => {
-    //   // This useEffect can be used for other data fetching operations
-    //   setTimeout(() => {
-    //     fetchDataFromServer()
-    //       .then((data) => {
-    //         setData(data);
-    //         setIsLoading(false);
-    //       })
-    //       .catch((error) => {
-    //         console.error('Error fetching data:', error);
-    //         setIsLoading(false); // Handle errors gracefully
-    //       });
-    //   }, 1000);
-    // }, []);
+        extractInitialLetters();
+    }, [userData]);
 
 
 
@@ -101,59 +57,6 @@ const UserProfile_ProjectAllocation = () => {
         setPopupVisible(!isPopupVisible);
         // setEditButtonVisible(false);
     };
-
-
-    const data = [
-        {
-            'id': '1',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name 1',
-            'start': '01-01-2001',
-            'end': '10-10-2010'
-        },
-        {
-            'id': '2',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name7',
-            'start': '02-02-2002',
-            'end': '20-20-2020'
-        },
-        {
-            'id': '3',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name9',
-            'start': '03-03-2003',
-            'end': '30-30-2030'
-        },
-        {
-            'id': '3',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name9',
-            'start': '03-03-2003',
-            'end': '30-30-2030'
-        },
-        {
-            'id': '3',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name9',
-            'start': '03-03-2003',
-            'end': '30-30-2030'
-        },
-        {
-            'id': '3',
-            'name': 'project1',
-            'date': '13-09-2023',
-            'cdm': 'name9',
-            'start': '03-03-2003',
-            'end': '30-30-2030'
-        }
-    ]
-
 
     return (
         <div className='content'>
@@ -196,9 +99,9 @@ const UserProfile_ProjectAllocation = () => {
                         <table className='table'>
                             <thead>
                                 <tr>
-                                    <th>Project name</th>
-                                    <th>Start date</th>
-                                    <th>End date</th>
+                                    <th>Project Name</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
                                     <th>Client Name</th>
                                 </tr>
                             </thead>

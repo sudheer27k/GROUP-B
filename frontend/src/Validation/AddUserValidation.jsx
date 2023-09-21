@@ -22,11 +22,6 @@ export const validateEmergencyContact = (emergencyContact) => {
     return /^\d{10}$/.test(emergencyContact);
 };
 
-// Validate password (customize the rules as needed)
-// export const validatePassword = (password) => {
-//     return  /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{8,}$/.test(password); // Example: Password must be at least 8 characters long
-// };
-
 // Validate date of joining (less than or equal to 7 years from now)
 export const validateDateOfJoining = (doj) => {
     const today = new Date();

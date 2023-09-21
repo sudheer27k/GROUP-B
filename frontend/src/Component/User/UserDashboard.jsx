@@ -11,9 +11,6 @@ import Calenders from './Birthdays/Birthdays.jsx'
 import Holidays from "./Holidays/Holidays";
 import Profile_ProjectAllocation from "./Profile_ProjectAllocation/UserProfile_ProjectAllocation";
 
-// import Users from "./UserProfile/Users";
-// import UserEvents from "./Events";
-// import Events from "./Events";
 const UserDashBoard = () =>{
     const email = localStorage.getItem('email')
     const navigate = useNavigate()
@@ -42,11 +39,13 @@ const UserDashBoard = () =>{
                   <Link to="holidays">Holidays</Link>
                 </li>
                 <li>
-                    <i className="" onClick={() => {
-                       localStorage.removeItem("jwt")
-                       localStorage.removeItem("id")
-                       localStorage.removeItem("email")
-                      navigate("/")}}>Logout</i> 
+                
+                    <i className="fa fa-sign-out" onClick={() => {
+                      localStorage.removeItem("jwt")
+                      localStorage.removeItem("id")
+                      localStorage.removeItem("email")
+                      navigate("/")}}>  Logout</i> 
+                 
                 </li>
               </ul>
             </nav>
@@ -60,7 +59,6 @@ const UserDashBoard = () =>{
               <Route path="events" element={<UserEvents />} />
               <Route path="birthdays" element={<Calenders />} />
               <Route path="holidays" element={<Holidays />} />
-              {/* <Route path="profile" element={<UserProfile_ProjectAllocation />} /> */}
               
             </Routes>
           </div>

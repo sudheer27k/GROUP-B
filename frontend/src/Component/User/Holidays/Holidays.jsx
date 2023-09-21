@@ -23,10 +23,6 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-// let birth_date = '2023-09-11'
-// const day = new Date(birth_date)
-
-
 
 function Holidays() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -58,7 +54,7 @@ function Holidays() {
     let day = new Date(b.date).getDate()
     let month = new Date(b.date).getMonth()
     let year = new Date().getFullYear();
-    let holiday = b.description
+    let holiday = b.name
     let free = {
       'title': holiday,
       'start': new Date(year, month, day + 1),
@@ -71,6 +67,7 @@ function Holidays() {
   const calendarClasses = modalOpen ? 'background-blur' : '';
   return (
     <>
+    <h2>Holidays</h2>
       <div className={calendarClasses}>
 
         <div className="App">
@@ -79,14 +76,9 @@ function Holidays() {
             events={events}
             startAccessor="start"
             endAccessor="end"
-            // popup
-            // components={components}
             onSelectEvent={handleEventClick}
             className="calendar" />
 
-          {/* {selectedEvent && (
-            <Eventmodal isOpen={modalOpen} onClose={closeModal} event={selectedEvent} />
-          )} */}
         </div>
       </div>
 

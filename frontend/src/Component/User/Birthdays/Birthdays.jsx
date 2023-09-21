@@ -73,6 +73,7 @@ function Calenders() {
   const calendarClasses = modalOpen ? 'background-blur' : '';
   return (
     <>
+    <h2>Birthday</h2>
       <div className={calendarClasses}>
 
         <div className="App">

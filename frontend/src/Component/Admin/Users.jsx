@@ -8,7 +8,6 @@ import {
     validatePhoneNumber,
     validateAge,
     validateEmergencyContact,
-    // validatePassword,
     validateDateOfJoining,
 } from '../../Validation/AddUserValidation';
 const addUserApi = new AddUserApi()
@@ -85,7 +84,6 @@ function Users() {
     const [contactNoError, setContactNoError] = useState('');
     const [dobError, setDobError] = useState('');
     const [emergencyContactError, setEmergencyContactError] = useState('');
-    // const [passwordError, setPasswordError] = useState('');
     const [dojError, setDojError] = useState('');
 
     // Function to handle form submission for adding a new user
@@ -96,7 +94,6 @@ function Users() {
         setContactNoError('');
         setDobError('');
         setEmergencyContactError('');
-        // setPasswordError('');
         setDojError('');
 
         // Check if all required fields are filled
@@ -157,9 +154,7 @@ function Users() {
             if (!validateEmergencyContact(newUser.emerg_contact)) {
                 setEmergencyContactError('Emergency-contact must be a 10-digit number');
             }
-            // if (!validatePassword(newUser.password)) {
-            //     setPasswordError('Password contains min 8 char,At least a number,symbol,small case,large case');
-            // }
+
             if (!validateDateOfJoining(newUser.doj)) {
                 setDojError('Date of joining must be less than or equal to 7 years from now');
             }
@@ -230,9 +225,7 @@ function Users() {
             if (!validateEmergencyContact(newUser.emerg_contact)) {
                 setEmergencyContactError('Emergency-contact must be a 10-digit number');
             }
-            // if (!validatePassword(newUser.password)) {
-            //     setPasswordError('Password must be at least 8 characters long and have a capital letter a small letter and a number"');
-            // }
+
             if (!validateDateOfJoining(newUser.doj)) {
                 setDojError('Date of joining must be less than or equal to 7 years from now');
             }
@@ -241,9 +234,7 @@ function Users() {
 
     // Function to handle form submission for deleting a user
     const handleDelete = async (id) => {
-        // const updatedUserData = userData.filter((user) => user.id !== userId);
-        // setUserData(updatedUserData);
-        // setUpdateUserModalOpen(false);
+
         const response = await addUserApi.deleteUser(id)
         if (response) {
             getAllUsersData();
@@ -285,8 +276,8 @@ function Users() {
                                                 <th>Contact</th>
                                                 <th>DOB</th>
                                                 <th>Designation</th>
-                                                <th>Emerg contact</th>
-                                                <th>Blood group</th>
+                                                <th>Emergency Contact</th>
+                                                <th>Blood Group</th>
                                                 <th>DOJ</th>
                                                 <th>Actions</th>
                                             </tr>

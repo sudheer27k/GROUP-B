@@ -6,7 +6,6 @@ const addUser = async(req,res) =>{
     
     try {
         
-
         // Extract the admin data from the request body
         const {first_name, last_name, email, contact_no, dob, designation, emerg_contact, blood_grp, doj} = req.body;
         
@@ -122,7 +121,6 @@ const updateUser = async (req, res) => {
         console.error(err);
         res.json({ error: 'Failed to update user',status:false });
     }
-
 }
 
 
@@ -143,11 +141,8 @@ const loginUser = async (req, res) => {
         // Handle any errors that occur during the update process
         console.error(err);
         res.json({ error: 'user not found',status:false });
-    }
-    
+    }   
 }
-
-
 
 module.exports = {
     addUser,

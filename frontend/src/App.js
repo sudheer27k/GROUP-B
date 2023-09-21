@@ -1,6 +1,5 @@
 import React from "react";
 
-// import SignIn from "./Components/SignIn/SignIn";
 import SignIn from "./Component/SignIn/SignIn"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';

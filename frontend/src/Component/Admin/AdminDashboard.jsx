@@ -10,7 +10,6 @@ import Events from "./Events";
 import ProjectAllocation from "./ProjectAllocation ";
 import Users from "./Users";
 import { ToastContainer } from "react-toastify";
-// import Events from "./Events";
 const AdminDashboard = () =>{
     const email = localStorage.getItem('email')
     const navigate = useNavigate()
@@ -42,7 +41,7 @@ const AdminDashboard = () =>{
                       localStorage.removeItem("jwt")
                       localStorage.removeItem("id")
                       localStorage.removeItem("email")
-                      navigate("/")}}>Logout</i> 
+                      navigate("/")}}>  Logout</i> 
                  
                 </li>
               </ul>
@@ -63,8 +62,6 @@ const AdminDashboard = () =>{
         </>
       );
       
-
 }
-
 
 export default AdminDashboard

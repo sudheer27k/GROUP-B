@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Eventcard({ event }) {
-    const { name,description,venue,date,start_time,end_time } = event;
+    const { name, description, venue, date, start_time, end_time } = event;
 
 
     const dateObject = new Date(date); // Corrected the month adjustment
@@ -14,11 +14,11 @@ export default function Eventcard({ event }) {
                 <div className="card-body">
                     <div className="custom">
                         <div className="box1">
-                            <h1 className="card-subtitle mb-2 text-muted day">{dateObject.getDate()}</h1>
-                            <h3 className="card-subtitle mb-2 text-muted day">{monthName}</h3>
+                            <h1 className="card-subtitle mb-2 text-muted day">{monthName}</h1>
+                            <h2 className="card-subtitle mb-2 text-muted day">{dateObject.getDate()}</h2>
                         </div>
                         <div className="box2">
-                        <h5 className="card-title">Event Name : {name}</h5>
+                            <h5 className="card-title">Event Name : {name}</h5>
                             <p className="card-text">Description : {description}</p>
                             <p className="card-text">Venue : {venue}</p>
 
