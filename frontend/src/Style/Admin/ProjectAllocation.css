@@ -128,3 +128,30 @@ button.btn-update {
 /* .tableadmin td:nth-child(1) {
   text-align: left;
 } */
+
+/* Add this CSS to your ProjectAllocation.css file or style it inline in your component */
+.project-allocation-container {
+  position: relative;
+}
+
+/* Add this style to your "Projects" button */
+.accordion-button-custom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+/* Add this style to your container for the table and "Add Project" button */
+.project-table-container {
+  max-height: calc(100vh - 200px); /* Adjust the value based on your design */
+  overflow-y: auto;
+}
+
+/* Add this style to the "Add Project" button */
+.btn-add {
+  position: sticky;
+  bottom: 16px; /* Adjust the margin as needed */
+  z-index: 2;
+  background-color: white;
+}

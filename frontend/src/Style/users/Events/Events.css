@@ -1,4 +1,4 @@
-.contain{
+/* .contain{
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
@@ -16,7 +16,7 @@
     width: 10rem;
 }
 .card{
-    /* display: absolute; */
+
     width: 45rem;
     height: 8rem;
     box-shadow: 5px 5px rgba(112, 120, 230, 0.267);
@@ -84,7 +84,7 @@
     
 }
 
-/* webkit-based browsers (Chrome, Safari) */
+
 .date{
     box-shadow: 3px 3px rgba(112, 120, 230, 0.267);
     border-radius: 5px;
@@ -102,7 +102,7 @@
     color: white;
     border-radius: 5px;
     border: none;
-    /* font-weight: bold; */
+   
 }
 .clear{
     background-color: #FF6196;
@@ -135,14 +135,198 @@
   width: 8px;
 }
 
-/* Customize the scrollbar thumb (the draggable part) */
-::-webkit-scrollbar-thumb {
-  background-color: #ffb4cd; /* Background color of the thumb */
-  border-radius: 10px; /* Rounded corners of the thumb */
-}
 
+::-webkit-scrollbar-thumb {
+  background-color: #ffb4cd;
+  border-radius: 10px;
+}
 
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
-  border-radius: 6px; /* Rounded corners of the track */
+  border-radius: 6px; 
+} */
+
+.eventsHeading{
+    /* background-color: #19105B; */
+    font-family: "Arial" !important;
+    color: #19105B;
+    display: block;
+    font-size: 2em;
+    /* margin-block-start: 0.67em; */
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    margin-left: 23%;
+    margin-top: 3%;
+    height: 50%;
+}
+
+.day {
+    /* background-color: red; */
+    color: white !important;
+}
+
+
+.card {
+    width: 51rem;
+    height: 9rem;
+    box-shadow: 5px 5px rgba(112, 120, 230, 0.267);
+    padding-bottom: 5rem;
+}
+
+
+.custom {
+    display: flex;
+}
+
+.box1 {
+    /* display: inherit; */
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    /* padding-right: 5px; */
+    background-color: #19105B;
+    border-radius: 0.5rem;
+}
+.box1 p{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #19105B;
+}
+
+.box2 {
+    width: 60%;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box3 {
+    width: 20%;
+    display: inherit;
+    align-items: center;
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+}
+
+.days p {
+    margin: 0;
+}
+
+.scrollable {
+    max-height: 520px;
+    overflow: auto;
+    margin-right: 26%;
+    padding-bottom: 5px;
+}
+
+.add {
+    width: 20%;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+}
+
+/* webkit-based browsers (Chrome, Safari) */
+.date {
+    width: 10rem;
+    padding: 0.5rem;
+    box-shadow: 3px 3px rgba(112, 120, 230, 0.267);
+    border-radius: 5px;
+    border: none;
+}
+
+.search {
+    width: 30%;
+    box-shadow: 3px 3px rgba(112, 120, 230, 0.267);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+}
+
+.today {
+    background-color: #ff6196;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    width: 5rem;
+    margin-left: 1rem;
+}
+
+.clear {
+    background-color: #ff6196;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    width: 3rem;
+    margin-left: -2em;
+}
+
+.icon-container-1 {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    transform: rotate(45deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.icon-container-1 img {
+    z-index: 2;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #19105B;
+    /* background-color: #ffb4cd; */
+    /* Background color of the thumb */
+    border-radius: 10px;
+    /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 6px;
+    /* Rounded corners of the track */
+}
+
+.check1{
+    margin-top: 0.2rem;
+    /* margin-left: 1rem; */
+}
+.check2{
+    /* margin-top: 0.2rem; */
+    margin-right: 1.5rem;
 }

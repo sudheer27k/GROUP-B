@@ -38,6 +38,13 @@ module.exports = (sequelize,DataTypes) =>{
                 notEmpty : true
             }
         },
+        client_name : {
+            type:DataTypes.STRING,
+            allowNull : false,
+            validate : {
+                notEmpty : true
+            }
+        }
 
     },
     {

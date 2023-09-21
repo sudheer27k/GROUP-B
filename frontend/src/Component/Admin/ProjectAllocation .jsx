@@ -19,6 +19,7 @@ function ProjectAllocation() {
     start_date: '',
     end_date: '',
     users_alloc: [],
+    client_name : ''
   });
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
   const [isFormValid, setFormValid] = useState(true);
@@ -62,6 +63,7 @@ function ProjectAllocation() {
       start_date: '',
       end_date: '',
       users_alloc: [], 
+      client_name : ''
     });
     setAddProjectModalOpen((prevIsOpen) => !prevIsOpen);
   };
@@ -122,7 +124,8 @@ function ProjectAllocation() {
       newProject.project_name.trim() !== '' &&
       newProject.start_date.trim() !== '' &&
       newProject.end_date.trim() !== '' &&
-      newProject.users_alloc.length > 0
+      newProject.users_alloc.length > 0 &&
+      newProject.client_name.trim() !== ''
 
     // Update isFormValid state based on form validity
     setFormValid(isFormValid);
@@ -259,12 +262,12 @@ function ProjectAllocation() {
                     <table className="tableadmin">
                       <thead>
                         <tr>
-                          <th>Proj-name</th>
-                          <th>Start-Date</th>
-                          <th>End-Date</th>
+                          <th>Name</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
                           {/* <th>Allocated Team</th> */}
                          
-                          <th>Actions</th>
+                          <th>Client Name</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -273,16 +276,17 @@ function ProjectAllocation() {
                             <td>{project.project_name}</td>
                             <td>{project.start_date}</td>
                             <td>{project.end_date}</td>
+                            <td>{project.client_name}</td>
                             {/* <td>{project.users_alloc.join(', ')}</td> */}
                             
-                            <td>
+                            {/* <td>
                               <button
                                 className="btn-update"
                                 onClick={() => toggleUpdateProject(project.id)}
                               >
                                 Edit
                               </button>
-                            </td>
+                            </td> */}
                           </tr>
                         ))}
                       </tbody>
@@ -339,6 +343,16 @@ function ProjectAllocation() {
                 type="date"
                 name="end_date"
                 value={newProject.end_date}
+                onChange={handleInputChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="Client Name">
+              <Form.Label>Client Name:</Form.Label>
+              <Form.Control
+                type="text"
+                name="client_name"
+                value={newProject.client_name}
                 onChange={handleInputChange}
                 required
               />

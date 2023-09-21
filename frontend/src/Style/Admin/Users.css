@@ -38,39 +38,6 @@ button.accordion-button-custom.collapsed {
     color: #fff !important;
 }
 
-/* Style the container for the accordion and the button */
-.users-container {
-    max-height: 80vh; /* Set a maximum height for the container */
-    overflow-y: scroll; /* Enable vertical scrolling if content overflows */
-    padding-bottom: 60px; /* Reserve space at the bottom for the fixed button */
-}
-  
-  /* Style the accordion items (adjust styles as needed) */
- .users-accordion-item {
-    /* Add your styles for accordion items here */
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    margin: 5px;
-}
-  
-  /* Style the fixed button */
-.fixed-button {
-    position: fixed;
-    bottom: 70px; /* Adjust the distance from the bottom as needed */
-    right: 20px; /* Adjust the distance from the right as needed */
-    background-color: #19105B; /* Change the button's background color */
-    color: #fff; /* Change the button's text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-  
-.fixed-button:hover {
-  background-color: #19105B; /* Change the button's background color on hover */
-}
-
 .tables {
   width: 100%;
   table-layout: fixed; 
@@ -151,4 +118,28 @@ button.accordion-button-custom.collapsed {
 .tables th:nth-child(10),
 .tables td:nth-child(10) {
   width: 10%; /* First column width */
+}
+
+.user-container {
+  position: relative;
+}
+
+.accordion-button-custom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.users-table-container {
+  max-height: calc(100vh - 200px); /* Adjust the value based on your design */
+  overflow-y: auto;
+}
+
+/* Add this style to the "Add Project" button */
+.btn-add {
+  position: sticky;
+  bottom: 16px; /* Adjust the margin as needed */
+  z-index: 2;
+  background-color: white;
 }

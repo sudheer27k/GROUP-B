@@ -32,12 +32,9 @@ function Users() {
     const [selectedUserIndex, setSelectedUserIndex] = useState(null);
     const [isFormValid, setFormValid] = useState(true);
     const getAllUsersData = async () => {
-
         let response = await addUserApi.getAllUsers()
-        console.log(response)
+        
         setUserData(response)
-
-
     }
 
 
@@ -252,8 +249,6 @@ function Users() {
             getAllUsersData();
             toast.success('User Deleted successfully')
         }
-
-
     };
 
     return (
@@ -280,19 +275,19 @@ function Users() {
                         <div className="accordion-body">
                             {activeAccordion === 'users' && (
                                 <>
+                                <div className='users-table-container'>
                                     <table className="tables">
                                         <thead>
                                             <tr>
-                                                <th>First-Name</th>
-                                                <th>Last-Name</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
                                                 <th>Email</th>
-                                                <th>Contact-no</th>
-                                                <th>Dob</th>
+                                                <th>Contact</th>
+                                                <th>DOB</th>
                                                 <th>Designation</th>
-                                                <th>Emerg-contact</th>
-                                                <th>Blood-grp</th>
-                                                {/* <th>Password</th> */}
-                                                <th>Doj</th>
+                                                <th>Emerg contact</th>
+                                                <th>Blood group</th>
+                                                <th>DOJ</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -307,7 +302,6 @@ function Users() {
                                                     <td>{user.designation}</td>
                                                     <td>{user.emerg_contact}</td>
                                                     <td>{user.blood_grp}</td>
-                                                    {/* <td>{user.password}</td> */}
                                                     <td>{user.doj}</td>
                                                     <td>
                                                         <button
@@ -315,7 +309,6 @@ function Users() {
                                                             className="btn-update1 btn-primary"
                                                             onClick={() => toggleUpdateUser(index)}
                                                         >
-                                                            {/* <FontAwesomeIcon icon={faEdit} />  */}
                                                             Update
                                                         </button>
                                                         <button
@@ -324,25 +317,25 @@ function Users() {
                                                             onClick={() => handleDelete(user.id)}
                                                         >
                                                             Delete
-                                                            {/* <FontAwesomeIcon icon={faTrash} />  */}
                                                         </button>
                                                     </td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
-                                    <button
-                                        className="btn-success btn-add fixed-button"
-                                        onClick={toggleAddUserModal}
-                                    >
-                                        Add User
-                                    </button>
-                                </>
-                            )}
-                        </div>
+                                </div>
+                                <button
+                                    className="btn-success btn-add"
+                                    onClick={toggleAddUserModal}
+                                >
+                                    Add User
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
+        </div>
             <Modal show={isAddUserModalOpen} onHide={toggleAddUserModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add User</Modal.Title>
@@ -411,7 +404,7 @@ function Users() {
                                 onChange={handleInputChange}
                                 required
                             />
-                            {emergencyContactError && <p className="text-danger">{emergencyContactError}</p>}
+                           
                         </Form.Group>
                         <Form.Group controlId="emerg_contact">
                             <Form.Label>Emerg-contact:</Form.Label>
@@ -422,6 +415,7 @@ function Users() {
                                 onChange={handleInputChange}
                                 required
                             />
+                            {emergencyContactError && <p className="text-danger">{emergencyContactError}</p>}
                         </Form.Group>
                         <Form.Group controlId="blood_grp">
                             <Form.Label>Blood-grp:</Form.Label>
@@ -544,16 +538,6 @@ function Users() {
                                 type="text"
                                 name="blood_grp"
                                 value={newUser.blood_grp}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </Form.Group>
-                        <Form.Group controlId="password">
-                            <Form.Label>Password:</Form.Label>
-                            <Form.Control
-                                type="password"
-                                name="password"
-                                value={newUser.password}
                                 onChange={handleInputChange}
                                 required
                             />

@@ -24,16 +24,13 @@ function Events() {
     const [isFormValid, setFormValid] = useState(true);
 
     // api call
-    let getAllEventsFunction = async() => {
+    const getAllEventsFunction = async() => {
       let response = await EventApis.getAllEvents()
-      setEventData(response)
-      
-  }
-      useEffect(() =>{
-        getAllEventsFunction()
-      },[])
-    
-
+      setEventData(response) 
+    }
+    useEffect(() =>{
+       getAllEventsFunction()
+    },[])
     const handleAccordionClick = (accordionId) => {
         setActiveAccordion((prevAccordion) =>
             prevAccordion === accordionId ? null : accordionId
@@ -128,6 +125,7 @@ function Events() {
             const {name,description,venue,date,start_time,end_time} = newEvent
             const result =  EventApis.AddEvent(newEvent)
             if (result == 'success'){
+                getAllEventsFunction()
                 setNewEvent({
                 id: '',  
                 name: '', 
@@ -147,7 +145,7 @@ function Events() {
 
 
     // Function to handle form submission for updating an event
-    const handleUpdate = (id) => {
+    const handleUpdate = async(id) => {
         // Check if all required fields are filled
 
         console.log(id)
@@ -195,22 +193,23 @@ function Events() {
             updatedEventData[selectedEventIndex] = newEvent;
 
             console.log(updatedEventData)
-            const response = EventApis.updateEvent(id,newEvent)
+            const response =await EventApis.updateEvent(id,newEvent)
             if (response){
-               
-                toast.success("Event Updated successfully")
-                getAllEventsFunction()
+                toast.success("Event Updated successfully",{
+                    autoClose : 900
+                })
+                // getAllEventsFunction()
             }
-            // setEventData(updatedEventData);
-            // setNewEvent({
-            //     id: '',
-            //     name: '',
-            //     description: '',
-            //     venue: '',
-            //     date: '',
-            //     start_time: '',
-            //     end_time: '',
-            // });
+            setEventData(updatedEventData);
+            setNewEvent({
+                id: '',
+                name: '',
+                description: '',
+                venue: '',
+                date: '',
+                start_time: '',
+                end_time: '',
+            });
             setUpdateEventModalOpen(false);
 
             // Log updated event data to console
@@ -224,10 +223,10 @@ function Events() {
     const handleDelete = async(id) => {
       const response = await EventApis.deleteEvent(id)
       if (response){
-        getAllEventsFunction()
+       getAllEventsFunction()
        toast.success('Event Deleted successfully')   
       }
-     };
+    };
 
 
     return (
@@ -254,6 +253,7 @@ function Events() {
                         <div className="accordion-body">
                             {activeAccordion === 'events' && (
                                 <>
+                                <div className='events-table-container'>
                                     <table className="table1">
                                         <thead>
                                             <tr>
@@ -261,8 +261,8 @@ function Events() {
                                                 <th>Description</th>
                                                 <th>Venue</th>
                                                 <th>Date</th>
-                                                <th>Start-time</th>
-                                                <th>End-time</th>
+                                                <th>Start Time</th>
+                                                <th>End Time</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -293,18 +293,19 @@ function Events() {
                                             ))}
                                         </tbody>
                                     </table>
-                                    <button
-                                        className="btn-success btn-add fixed-button"
-                                        onClick={toggleAddEventModal}
-                                    >
-                                        Add Event
-                                    </button>
-                                </>
-                            )}
-                        </div>
+                                </div>
+                                <button
+                                    className="btn-success btn-add"
+                                    onClick={toggleAddEventModal}
+                                >
+                                    Add Event
+                                </button>
+                            </>
+                        )}    
                     </div>
                 </div>
             </div>
+        </div>
             <Modal show={isAddEventModalOpen} onHide={toggleAddEventModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Add Event</Modal.Title>

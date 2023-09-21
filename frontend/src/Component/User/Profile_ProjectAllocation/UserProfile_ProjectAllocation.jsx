@@ -199,6 +199,7 @@ const UserProfile_ProjectAllocation = () => {
                                     <th>Project name</th>
                                     <th>Start date</th>
                                     <th>End date</th>
+                                    <th>Client Name</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -207,6 +208,7 @@ const UserProfile_ProjectAllocation = () => {
                                         <td>{item.project_name}</td>
                                         <td>{item.start_date}</td>
                                         <td>{item.end_date}</td>
+                                        <td>{item.client_name}</td>
                                     </tr>
                                 ))}
                                 {/*             

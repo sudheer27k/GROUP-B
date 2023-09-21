@@ -7,7 +7,7 @@ const addProject = async(req,res) =>{
         
 
         // Extract the admin data from the request body
-        const {project_name, start_date, end_date} = req.body;
+        const {project_name, start_date, end_date, client_name } = req.body;
 
         // checking project is already existed or not
         const findProject = await projects.findOne({
@@ -26,7 +26,9 @@ const addProject = async(req,res) =>{
                 const newProject = await projects.create({
                     project_name, 
                     start_date, 
-                    end_date
+                    end_date, 
+                    client_name
+
          });
  
          // Send a response indicating success
