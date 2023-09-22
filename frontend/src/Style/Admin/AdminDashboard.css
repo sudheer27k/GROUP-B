@@ -39,6 +39,9 @@
     bottom: 20px; /* Adjust the bottom position as needed */
   }
   
+.logout_btn :hover{
+  cursor: pointer;
+}
   
   
   

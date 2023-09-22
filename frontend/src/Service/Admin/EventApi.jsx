@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import { env } from '../env';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,7 @@ class AddEventApi{
       }
     async  AddEvent(Info) { 
         try{
-            const response = await axios.post("http://localhost:3000/event/add", Info, this.axisConfig);
+            const response = await axios.post(`${env.REACT_APP_API}/event/add`, Info, this.axisConfig);
              console.log(response)
              if (response.data.status){
                 toast.success("Event Added successfully")
@@ -31,7 +32,7 @@ class AddEventApi{
 
     async getAllEvents(){
         try{
-            const response = await axios.get("http://localhost:3000/event/allEvents", this.axisConfig);
+            const response = await axios.get(`${env.REACT_APP_API}/event/allEvents`, this.axisConfig);
              console.log(response)
              if (response.data.status){
               
@@ -44,7 +45,7 @@ class AddEventApi{
     }
     async deleteEvent(id){
         try{
-            const response = await axios.delete(`http://localhost:3000/event/deleteEvent/${id}`, this.axisConfig);
+            const response = await axios.delete(`${env.REACT_APP_API}/event/deleteEvent/${id}`, this.axisConfig);
              console.log(response.status)
              return response.status
             
@@ -56,7 +57,7 @@ class AddEventApi{
 
     async updateEvent(id,newEvent){
         try{
-            const response = await axios.put(`http://localhost:3000/event/update/${id}`,newEvent, this.axisConfig);
+            const response = await axios.put(`${env.REACT_APP_API}/event/update/${id}`,newEvent, this.axisConfig);
           
              console.log(response.status)
              return response.status

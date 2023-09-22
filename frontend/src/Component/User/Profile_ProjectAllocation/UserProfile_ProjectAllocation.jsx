@@ -12,20 +12,20 @@ const UserProfile_ProjectAllocation = () => {
     const [isPopupVisible, setPopupVisible] = useState(false);
     const [isEditButtonVisible, setEditButtonVisible] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
-    const [projectsData,setProjectsData] = useState([])
+    const [projectsData, setProjectsData] = useState([])
 
     const loginUser = async () => {
         let id = localStorage.getItem("id")
-        if (id){
+        if (id) {
             const response = await getLoginUser.getLoginUserDetails(id)
             setUserData(response)
         }
-       
+
     }
-    const projectAllocationDetalils = async() =>{
+    const projectAllocationDetalils = async () => {
         let id = localStorage.getItem("id")
-        
-        if(id){
+
+        if (id) {
             const response = await getLoginUser.UserProjectAllocationDetails(id)
             setProjectsData(response.data)
         }
@@ -37,17 +37,16 @@ const UserProfile_ProjectAllocation = () => {
 
 
     useEffect(() => {
-        // Function to extract the initial letters from first and last names
+        // Function to extract the initial letters from the first_name
         const extractInitialLetters = () => {
-            const nameElement = document.getElementById('name');
-            if (nameElement && nameElement.textContent) {
-                const nameParts = nameElement.textContent.split(' ');
-                const initials = nameParts.map((part) => part.charAt(0).toUpperCase());
-                const initialString = initials.join('');
-                setInitialLetter(initialString);
+            if (userData.first_name) {
+                const names = userData.first_name.split(' ');
+                const initialLetters = names.map((name) => name.charAt(0).toUpperCase());
+                setInitialLetter(initialLetters.join(' '));
             }
         };
 
+        // Call extractInitialLetters when userData changes
         extractInitialLetters();
     }, [userData]);
 

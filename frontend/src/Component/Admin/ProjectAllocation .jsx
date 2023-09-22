@@ -141,9 +141,16 @@ function ProjectAllocation() {
         console.log(status, "this is status")
         if (status){
           getAllProjectsData()
-          toast.success("Project added successfully")
+          toast.success("Project added successfully",{
+            autoClose:1000
+          })
         }
        
+      }
+      else{
+        toast.error("Project already existed",{
+          autoClose:1000
+        })
       }
     }
     

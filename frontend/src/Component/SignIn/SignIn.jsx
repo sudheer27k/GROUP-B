@@ -32,13 +32,17 @@ const SignIn = () => {
 
     const handleBlurEmail = () => {
         if (email && !validateEmail(email)) {
-            toast.error("Email should be of the format user@jmangroup.com");
+            toast.error("Email should be of the format user@jmangroup.com",{
+                autoClose:1000
+              });
         }
     };
 
     const handleBlurPassword = () => {
         if (password && !validatePassword(password)) {
-            toast.error("Password should contain at least 8 characters with at least one uppercase letter, one lowercase letter, one numeric value, and one special character.");
+            toast.error("Password should contain at least 8 characters with at least one uppercase letter, one lowercase letter, one numeric value, and one special character.",{
+                autoClose:1000
+              });
         }
     };
 
@@ -53,22 +57,33 @@ const SignIn = () => {
                     const response = await signInApi.SingIn(Info)
                     console.log(response)
                     localStorage.setItem('jwt', response.data.jsonToken)
+                    localStorage.setItem("role", response.data.role)
                     if (response.data.message === 'details not found') {
-                        toast.error("User not found")
+                        toast.error("User not found",{
+                            autoClose:1000
+                          })
                     }
                     if (response.data.role === 'admin') {
-                        toast.success("Login successfull")
+                        toast.success("Login successfull",{
+                            autoClose:1000
+                          })
                         navigate('/admin/events')
                     }
                     else if (response.data.message === "admin authentication failed") {
-                        toast.error("Invalid credentials")
+                        toast.error("Invalid credentials",{
+                            autoClose:1000
+                          })
                     }
                     else if (response.data.role === 'user') {
                         navigate('/user/profile')
-                        toast.success("Login successful")
+                        toast.success("Login successful",{
+                            autoClose:1000
+                          })
                     }
                     else if (response.data.message === "user authentication failed") {
-                        toast.error("Invalid credentials")
+                        toast.error("Invalid credentials",{
+                            autoClose:1000
+                          })
                     }
                     
                     localStorage.setItem("id", response.data.user.id)
@@ -80,7 +95,9 @@ const SignIn = () => {
             }
         }
         else {
-            toast.error("All fields are required!");
+            toast.error("All fields are required!",{
+                autoClose:1000
+              });
         }
     };
 

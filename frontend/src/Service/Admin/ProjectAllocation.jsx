@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import { env } from '../env';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,7 @@ class ProjectAllocationApi{
   }
     async  AddProject(Info) { 
         try{
-            const response = await axios.post("http://localhost:3000/project/add", Info, this.axisConfig);
+            const response = await axios.post(`${env.REACT_APP_API}/project/add`, Info, this.axisConfig);
              console.log(response)
             return response.data
             
@@ -33,7 +34,7 @@ class ProjectAllocationApi{
         project_id : proj_id 
       }
         try {
-          const response = await axios.post("http://localhost:3000/userProject",info, this.axisConfig);
+          const response = await axios.post(`${env.REACT_APP_API}/userProject`,info, this.axisConfig);
           return response.status
           
       
@@ -45,7 +46,7 @@ class ProjectAllocationApi{
 
       async  getAllProjects() { 
         try{
-            const response = await axios.get("http://localhost:3000/project/all", this.axisConfig);
+            const response = await axios.get(`${env.REACT_APP_API}/project/all`, this.axisConfig);
             
             return response
             

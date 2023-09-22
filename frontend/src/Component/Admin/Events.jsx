@@ -224,7 +224,9 @@ function Events() {
       const response = await EventApis.deleteEvent(id)
       if (response){
        getAllEventsFunction()
-       toast.success('Event Deleted successfully')   
+       toast.success('Event Deleted successfully',{
+        autoClose:900
+      })   
       }
     };
 
@@ -280,12 +282,14 @@ function Events() {
                                                             className="btn-update2 btn-primary"
                                                             onClick={() => toggleUpdateEvent(index)}
                                                         >
+                                                          
                                                             Update
                                                         </button>
                                                         <button
                                                             className="btn-delete btn-danger"
                                                             onClick={() => handleDelete(event.id)}
                                                         >
+
                                                             Delete
                                                         </button>
                                                     </td>

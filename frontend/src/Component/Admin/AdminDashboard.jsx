@@ -13,9 +13,29 @@ import { ToastContainer } from "react-toastify";
 const AdminDashboard = () =>{
     const email = localStorage.getItem('email')
     const navigate = useNavigate()
-    useEffect(() =>{
-        const jsonToken = localStorage.getItem('jwt')
-        !jsonToken && navigate("/")
+    // useEffect(() =>{
+    //     const jsonToken = localStorage.getItem('jwt')
+    //     !jsonToken && navigate("/")
+    // })
+
+    useEffect(() => {
+
+      const jsonToken = localStorage.getItem('jwt')
+
+      const role = localStorage.getItem("role")
+
+     
+
+      !jsonToken && navigate("/")
+
+     
+
+      if (role === 'user') {
+
+        navigate("/user/profile")
+
+      }
+
     })
   
       return (
@@ -35,7 +55,7 @@ const AdminDashboard = () =>{
                 <li>
                   <Link to="project-allocation">Project Allocation</Link>
                 </li>
-                <li>
+                <li className="logout_btn">
                 
                     <i className="fa fa-sign-out" onClick={() => {
                       localStorage.removeItem("jwt")

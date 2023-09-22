@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
      <BrowserRouter>
-     <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
+     <ToastContainer position="top-right" autoClose={1000} hideProgressBar={false} />
       <Routes>
         <Route path="/" element={<SignIn />} /> 
         <Route path="/admin/*" element={<AdminDashboard />} />

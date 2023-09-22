@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios';
-
-import { toast } from 'react-toastify';
+import { env } from '../env';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -19,7 +18,7 @@ class AddUserApi{
         
          
         try{
-            const response = await axios.post("http://localhost:3000/user/add", Info,this.axisConfig);
+            const response = await axios.post(`${env.REACT_APP_API}/user/add`, Info,this.axisConfig);
              return response
              
             
@@ -30,7 +29,7 @@ class AddUserApi{
 
     async getAllUsers(){
         try{
-            const response = await axios.get("http://localhost:3000/user/allusers", this.axisConfig);
+            const response = await axios.get(`${env.REACT_APP_API}/user/allusers`, this.axisConfig);
              if (response.data.status){    
                 return response.data.users
              }
@@ -41,7 +40,7 @@ class AddUserApi{
     }
     async deleteUser(id){
         try{
-            const response = await axios.delete(`http://localhost:3000/user/deleteUser/${id}`, this.axisConfig);
+            const response = await axios.delete(`${env.REACT_APP_API}/user/deleteUser/${id}`, this.axisConfig);
              return response.status
             
         }catch(err){
@@ -52,7 +51,7 @@ class AddUserApi{
     async updateUser(id,newUser){
         console.log(id,newUser ,"this is from services")
         try{
-            const response = await axios.put(`http://localhost:3000/user/update/${id}`,newUser, this.axisConfig);
+            const response = await axios.put(`${env.REACT_APP_API}/user/update/${id}`,newUser, this.axisConfig);
             console.log()
              console.log(response.status)
              return response.status

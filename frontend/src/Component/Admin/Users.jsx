@@ -116,11 +116,15 @@ function Users() {
             const response = await addUserApi.AddUser(newUser)
             console.log(response, "this is frontend response")
             if (response.status) {
-                toast.success("user added successfully Added successfully")
+                toast.success("user added successfully Added successfully",{
+                    autoClose:1000
+                  })
 
             }
             else {
-                toast.error("something went wrong")
+                toast.error("something went wrong",{
+                    autoClose:1000
+                  })
             }
 
             // Clear the form fields
@@ -192,7 +196,9 @@ function Users() {
             updatedUserData[selectedUserIndex] = newUser;
             const response = await addUserApi.updateUser(id, newUser)
             if (response) {
-                toast.success("User Information updated successfully.")
+                toast.success("User Information updated successfully.",{
+                    autoClose:1000
+                  })
             }
             setUserData(updatedUserData);
             setNewUser({
@@ -238,7 +244,9 @@ function Users() {
         const response = await addUserApi.deleteUser(id)
         if (response) {
             getAllUsersData();
-            toast.success('User Deleted successfully')
+            toast.success('User Deleted successfully',{
+                autoClose:1000
+              })
         }
     };
 

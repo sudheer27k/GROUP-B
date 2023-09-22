@@ -14,9 +14,29 @@ import Profile_ProjectAllocation from "./Profile_ProjectAllocation/UserProfile_P
 const UserDashBoard = () =>{
     const email = localStorage.getItem('email')
     const navigate = useNavigate()
-    useEffect(() =>{
-        const jsonToken = localStorage.getItem('jwt')
-        !jsonToken && navigate("/")
+    // useEffect(() =>{
+    //     const jsonToken = localStorage.getItem('jwt')
+    //     !jsonToken && navigate("/")
+    // })
+
+    useEffect(() => {
+
+      const jsonToken = localStorage.getItem('jwt')
+
+      const role = localStorage.getItem("role")
+
+     
+
+      !jsonToken && navigate("/")
+
+     
+
+      if (role === 'admin') {
+
+        navigate("/admin/events")
+
+      }
+
     })
   
       return (
@@ -38,7 +58,7 @@ const UserDashBoard = () =>{
                 <li>
                   <Link to="holidays">Holidays</Link>
                 </li>
-                <li>
+                <li className="logout_btn">
                 
                     <i className="fa fa-sign-out" onClick={() => {
                       localStorage.removeItem("jwt")
